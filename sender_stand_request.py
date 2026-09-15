@@ -13,5 +13,6 @@ def create_order(body):
 
 def get_order_by_track(track):
     return requests.get(
-        configuration.URL_SERVICE + configuration.GET_ORDER_BY_TRACK_PATH + str(track)
+        configuration.URL_SERVICE + configuration.GET_ORDER_BY_TRACK_PATH,
+        params={"t": track}
     )
